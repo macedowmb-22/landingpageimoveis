@@ -125,10 +125,13 @@ export function LeadForm() {
   return (
     <section
       id="contato"
-      className="group/island relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary px-6 py-20 transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.35)] md:px-10 md:py-28"
+      className="border-beam relative mx-auto w-full max-w-7xl overflow-hidden rounded-[3rem] border border-white/10 px-6 py-20 transition-all duration-500 md:px-10 md:py-28"
       style={{
+        backgroundColor: "#050B18",
+        backgroundImage:
+          "radial-gradient(ellipse 60% 50% at 80% 50%, #0A192F 0%, transparent 70%)",
         boxShadow:
-          "inset 0 0 20px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
+          "inset 0 0 30px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
       }}
     >
       <div

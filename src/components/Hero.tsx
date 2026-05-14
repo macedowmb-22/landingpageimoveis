@@ -4,19 +4,20 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
   return (
     <section
-      className="group/island relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.35)]"
+      className="border-beam relative mx-auto w-full max-w-7xl overflow-hidden rounded-[3rem] border border-white/10 transition-all duration-500"
       style={{
+        backgroundColor: "#050B18",
         boxShadow:
-          "inset 0 0 20px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
+          "inset 0 0 30px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
       }}
     >
-      {/* Névoa de luz centralizada */}
+      {/* Deep navy fintech gradient */}
       <div
         aria-hidden
         className="absolute inset-0 -z-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.28 0.15 265) 0%, oklch(0.18 0.12 265) 60%, oklch(0.12 0.08 265) 100%)",
+            "radial-gradient(ellipse 90% 70% at 50% 30%, #0A192F 0%, #050B18 60%, #03060f 100%)",
         }}
       />
       {/* Brilho verde sutil de fundo */}
