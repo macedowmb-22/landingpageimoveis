@@ -40,14 +40,29 @@ export function Hero() {
           ajudamos você na quitação para liberar seu financiamento.
         </p>
 
-        <div className="mt-10">
+        <div className="relative mt-10">
+          <span
+            aria-hidden
+            className="absolute inset-0 -z-0 animate-ping rounded-xl bg-secondary/40 opacity-60"
+          />
           <Button
+            asChild
             variant="secondary"
             size="lg"
-            className="group relative shadow-[0_0_0_0_color-mix(in_oklab,var(--secondary)_60%,transparent)] transition-shadow duration-300 hover:shadow-[0_0_40px_8px_color-mix(in_oklab,var(--secondary)_45%,transparent)]"
+            className="group relative font-bold shadow-[0_0_0_0_color-mix(in_oklab,var(--secondary)_60%,transparent)] transition-shadow duration-300 hover:shadow-[0_0_40px_8px_color-mix(in_oklab,var(--secondary)_45%,transparent)]"
           >
-            Simular meu Financiamento Agora
-            <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
+            <a
+              href="#contato"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("contato")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              Simular meu Financiamento Agora
+              <ArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
+            </a>
           </Button>
         </div>
 
