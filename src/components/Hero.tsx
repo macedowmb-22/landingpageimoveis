@@ -3,8 +3,14 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-primary">
-      {/* Gradiente radial sutil em torno do azul royal */}
+    <section
+      className="group/island relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.35)]"
+      style={{
+        boxShadow:
+          "inset 0 0 20px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
+      }}
+    >
+      {/* Névoa de luz centralizada */}
       <div
         aria-hidden
         className="absolute inset-0 -z-0"
@@ -22,8 +28,39 @@ export function Hero() {
             "radial-gradient(ellipse 50% 50% at 50% 0%, color-mix(in oklab, var(--secondary) 25%, transparent), transparent 70%)",
         }}
       />
+      {/* Curva orgânica decorativa atrás do H1 */}
+      <div
+        aria-hidden
+        className="absolute left-1/2 top-1/3 -z-0 h-[420px] w-[1100px] -translate-x-1/2 -translate-y-1/2 opacity-60"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(16,185,129,0.15), transparent 70%)",
+          filter: "blur(40px)",
+        }}
+      />
+      <svg
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-0 -translate-x-1/2 -translate-y-1/2 opacity-20"
+        width="900"
+        height="300"
+        viewBox="0 0 900 300"
+        fill="none"
+      >
+        <path
+          d="M0 200 C 200 50, 700 50, 900 200"
+          stroke="url(#heroLine)"
+          strokeWidth="1"
+        />
+        <defs>
+          <linearGradient id="heroLine" x1="0" y1="0" x2="900" y2="0">
+            <stop offset="0%" stopColor="rgba(16,185,129,0)" />
+            <stop offset="50%" stopColor="rgba(16,185,129,0.6)" />
+            <stop offset="100%" stopColor="rgba(16,185,129,0)" />
+          </linearGradient>
+        </defs>
+      </svg>
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-28 text-center md:py-40">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center md:px-10 md:py-36">
         <span className="mb-8 inline-flex items-center rounded-full border border-stone-50/15 bg-stone-50/5 px-4 py-1.5 text-xs font-medium text-stone-50/80 backdrop-blur">
           Especialistas em crédito imobiliário
         </span>
