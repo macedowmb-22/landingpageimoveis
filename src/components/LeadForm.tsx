@@ -107,7 +107,7 @@ export function LeadForm() {
         `WhatsApp: ${form.whatsapp}\n` +
         `Imóvel: ${form.valor}\n` +
         `Status: ${form.status}`;
-      const teamUrl = `https://wa.me/5561991513859?text=${encodeURIComponent(teamMessage)}`;
+      const teamUrl = `https://wa.me/5561992261607?text=${encodeURIComponent(teamMessage)}`;
       window.open(teamUrl, "_blank", "noopener,noreferrer");
 
       setSent(true);
