@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { LeadForm } from "@/components/LeadForm";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -14,6 +15,7 @@ function Index() {
       <Hero />
       <Features />
       <LeadForm />
+      <Footer />
       <WhatsAppButton />
     </main>
   );
