@@ -4,13 +4,13 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary">
-      {/* Gradiente radial sutil slate-900 -> slate-950 */}
+      {/* Gradiente radial sutil em torno do azul royal */}
       <div
         aria-hidden
         className="absolute inset-0 -z-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.208 0.042 265.755) 0%, oklch(0.13 0.028 265.755) 60%, oklch(0.09 0.02 265.755) 100%)",
+            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.34 0.14 260) 0%, oklch(0.24 0.12 260) 60%, oklch(0.18 0.09 260) 100%)",
         }}
       />
       {/* Brilho verde sutil de fundo */}
