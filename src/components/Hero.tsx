@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-slate-950">
+    <section className="relative overflow-hidden bg-primary">
       {/* Gradiente radial sutil slate-900 -> slate-950 */}
       <div
         aria-hidden
