@@ -15,6 +15,7 @@ function Index() {
       <Hero />
       <Features />
       <LeadForm />
+      <Footer />
       <WhatsAppButton />
     </main>
   );
