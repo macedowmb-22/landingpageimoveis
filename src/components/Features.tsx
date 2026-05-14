@@ -29,7 +29,7 @@ const features: Feature[] = [
 
 export function Features() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-20 md:py-28">
+    <section className="relative overflow-hidden bg-primary py-20 md:py-28">
       {/* Glow sutil ao fundo */}
       <div
         aria-hidden

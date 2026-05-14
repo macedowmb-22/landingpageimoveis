@@ -123,7 +123,7 @@ export function LeadForm() {
   }
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-slate-950 py-20 md:py-28">
+    <section id="contato" className="relative overflow-hidden bg-primary py-20 md:py-28">
       <div
         aria-hidden
         className="absolute inset-0 -z-0 opacity-40"
