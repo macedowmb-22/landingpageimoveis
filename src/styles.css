@@ -72,7 +72,7 @@
   --card-foreground: oklch(0.22 0.09 260);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.09 260);
-  --primary: oklch(0.28 0.13 260); /* royal navy blue from flyer */
+  --primary: oklch(0.22 0.14 265); /* deep royal navy */
   --primary-foreground: oklch(0.985 0.001 106.423);
   --secondary: oklch(0.62 0.18 145); /* vivid green from flyer */
   --secondary-foreground: oklch(0.985 0.001 106.423);
