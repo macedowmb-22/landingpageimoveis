@@ -58,6 +58,10 @@ export function Hero() {
                 document
                   .getElementById("contato")
                   ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                setTimeout(() => {
+                  const nome = document.getElementById("nome") as HTMLInputElement | null;
+                  nome?.focus({ preventScroll: true });
+                }, 700);
               }}
             >
               Simular meu Financiamento Agora
