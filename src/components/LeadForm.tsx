@@ -176,7 +176,10 @@ export function LeadForm() {
         </div>
 
         {/* Lado direito - card */}
-        <div className="rounded-2xl border border-stone-50/10 bg-stone-50/[0.04] p-7 backdrop-blur-md shadow-2xl md:p-9">
+        <div
+          className="group relative rounded-3xl border border-white/10 bg-stone-50/[0.04] p-7 backdrop-blur-md transition-all duration-300 hover:border-emerald-400/40 hover:shadow-[0_0_50px_-10px_rgba(16,185,129,0.5)] md:p-9"
+          style={{ boxShadow: "inset 0 0 20px rgba(16,185,129,0.05)" }}
+        >
           {sent ? (
             <div className="flex flex-col items-center py-8 text-center">
               <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/15 text-secondary ring-4 ring-secondary/10">
