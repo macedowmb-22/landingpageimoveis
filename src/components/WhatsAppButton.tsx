@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5561991513859";
 const WHATSAPP_MESSAGE =
-  "Olá! Tenho interesse em simular meu financiamento imobiliário.";
+  "Olá, gostaria de falar agora com um consultor sobre o financiamento 100%";
 
 export function WhatsAppButton() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(

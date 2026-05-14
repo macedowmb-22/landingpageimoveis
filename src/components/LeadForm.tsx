@@ -84,10 +84,42 @@ export function LeadForm() {
     }
     setErrors({});
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSent(true);
-    toast.success("Dados enviados com sucesso!");
+    try {
+      const response = await fetch("https://formspree.io/f/mrejvayz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nome: form.nome,
+          whatsapp: form.whatsapp,
+          valor: form.valor,
+          status: form.status,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Falha no envio");
+
+      const teamMessage =
+        `NOVO LEAD SITE\n\n` +
+        `Nome: ${form.nome}\n` +
+        `WhatsApp: ${form.whatsapp}\n` +
+        `Imóvel: ${form.valor}\n` +
+        `Status: ${form.status}`;
+      const teamUrl = `https://wa.me/5561991513859?text=${encodeURIComponent(teamMessage)}`;
+      window.open(teamUrl, "_blank", "noopener,noreferrer");
+
+      setSent(true);
+      toast.success("Dados enviados com sucesso!");
+    } catch (err) {
+      console.error(err);
+      toast.error(
+        "Ops! Ocorreu um erro. Tente novamente ou use o botão flutuante.",
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
