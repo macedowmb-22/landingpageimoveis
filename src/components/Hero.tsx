@@ -10,7 +10,7 @@ export function Hero() {
         className="absolute inset-0 -z-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.34 0.14 260) 0%, oklch(0.24 0.12 260) 60%, oklch(0.18 0.09 260) 100%)",
+            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.28 0.15 265) 0%, oklch(0.18 0.12 265) 60%, oklch(0.12 0.08 265) 100%)",
         }}
       />
       {/* Brilho verde sutil de fundo */}
