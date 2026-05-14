@@ -11,29 +11,28 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#04060d]">
-      {/* Mesh gradient background — fixed, blurred, cinematic depth */}
+    <main
+      className="relative min-h-screen overflow-hidden"
+      style={{ backgroundColor: "#050B18" }}
+    >
+      {/* Deep Navy Fintech Gradient — radial accents */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 15% 10%, #0A192F 0%, transparent 60%), radial-gradient(ellipse 55% 50% at 85% 55%, #0A192F 0%, transparent 65%), radial-gradient(ellipse 50% 40% at 50% 100%, #0A192F 0%, transparent 70%)",
+        }}
+      />
+      {/* Subtle emerald + blue mesh blobs for cinematic depth */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
         <div
           className="absolute -left-40 top-[-10%] h-[600px] w-[600px] rounded-full"
-          style={{
-            background: "rgba(16,185,129,0.12)",
-            filter: "blur(150px)",
-          }}
+          style={{ background: "rgba(16,185,129,0.08)", filter: "blur(150px)" }}
         />
         <div
           className="absolute -right-40 top-[40%] h-[700px] w-[700px] rounded-full"
-          style={{
-            background: "rgba(59,130,246,0.12)",
-            filter: "blur(150px)",
-          }}
-        />
-        <div
-          className="absolute left-1/3 bottom-[-10%] h-[500px] w-[500px] rounded-full"
-          style={{
-            background: "rgba(16,185,129,0.08)",
-            filter: "blur(150px)",
-          }}
+          style={{ background: "rgba(59,130,246,0.08)", filter: "blur(150px)" }}
         />
       </div>
 
