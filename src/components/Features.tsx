@@ -30,16 +30,7 @@ const features: Feature[] = [
 export function Features() {
   return (
     <section className="relative overflow-hidden bg-primary py-20 md:py-28">
-      {/* Mesmo gradiente radial do Hero */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 70% at 50% 30%, oklch(0.28 0.15 265) 0%, oklch(0.18 0.12 265) 60%, oklch(0.12 0.08 265) 100%)",
-        }}
-      />
-      {/* Glow verde sutil */}
+      {/* Glow sutil ao fundo */}
       <div
         aria-hidden
         className="absolute inset-0 -z-0 opacity-30"
