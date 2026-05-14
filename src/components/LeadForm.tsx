@@ -123,7 +123,14 @@ export function LeadForm() {
   }
 
   return (
-    <section id="contato" className="relative overflow-hidden bg-primary py-20 md:py-28">
+    <section
+      id="contato"
+      className="group/island relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary px-6 py-20 transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.35)] md:px-10 md:py-28"
+      style={{
+        boxShadow:
+          "inset 0 0 20px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
+      }}
+    >
       <div
         aria-hidden
         className="absolute inset-0 -z-0 opacity-40"
@@ -133,7 +140,7 @@ export function LeadForm() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16">
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Lado esquerdo */}
         <div className="text-center lg:text-left">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-3 py-1 text-xs font-medium text-secondary">
@@ -169,7 +176,10 @@ export function LeadForm() {
         </div>
 
         {/* Lado direito - card */}
-        <div className="rounded-2xl border border-stone-50/10 bg-stone-50/[0.04] p-7 backdrop-blur-md shadow-2xl md:p-9">
+        <div
+          className="group relative rounded-3xl border border-white/10 bg-stone-50/[0.04] p-7 backdrop-blur-md transition-all duration-300 hover:border-emerald-400/40 hover:shadow-[0_0_50px_-10px_rgba(16,185,129,0.5)] md:p-9"
+          style={{ boxShadow: "inset 0 0 20px rgba(16,185,129,0.05)" }}
+        >
           {sent ? (
             <div className="flex flex-col items-center py-8 text-center">
               <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/15 text-secondary ring-4 ring-secondary/10">

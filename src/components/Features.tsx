@@ -4,6 +4,7 @@ type Feature = {
   icon: LucideIcon;
   title: string;
   description: string;
+  className: string;
 };
 
 const features: Feature[] = [
@@ -11,25 +12,34 @@ const features: Feature[] = [
     icon: Home,
     title: "Financiamento 100%",
     description:
-      "Oportunidade exclusiva para conquistar seu imóvel sem necessidade de entrada.",
+      "Oportunidade exclusiva para conquistar seu imóvel sem necessidade de entrada. Aprovação direta com bancos parceiros e condições estendidas para você.",
+    className: "md:col-span-2 md:row-span-2",
   },
   {
     icon: ShieldCheck,
     title: "Regularização de Nome",
     description:
-      "Dívidas entre R$ 2 mil e R$ 3 mil? Nós auxiliamos na quitação para viabilizar seu crédito.",
+      "Dívidas entre R$ 2 mil e R$ 3 mil? Auxiliamos na quitação para viabilizar seu crédito.",
+    className: "md:col-span-2 md:row-span-1",
   },
   {
     icon: Zap,
     title: "Análise de Elite",
     description:
-      "Processo rápido, seguro e transparente para você e seu negócio.",
+      "Processo rápido, seguro e transparente.",
+    className: "md:col-span-2 md:row-span-1",
   },
 ];
 
 export function Features() {
   return (
-    <section className="relative overflow-hidden bg-primary py-20 md:py-28">
+    <section
+      className="group/island relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2.5rem] border border-white/10 bg-primary px-6 py-20 transition-all duration-500 hover:border-emerald-400/40 hover:shadow-[0_0_60px_-10px_rgba(16,185,129,0.35)] md:px-10 md:py-28"
+      style={{
+        boxShadow:
+          "inset 0 0 20px rgba(16,185,129,0.05), 0 30px 80px -40px rgba(0,0,0,0.6)",
+      }}
+    >
       {/* Glow sutil ao fundo */}
       <div
         aria-hidden
@@ -40,7 +50,7 @@ export function Features() {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mb-14 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-stone-50 md:text-4xl">
             Por que somos a escolha certa
@@ -50,11 +60,15 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {features.map(({ icon: Icon, title, description }) => (
+        {/* Bento grid */}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-4 md:auto-rows-[180px]">
+          {features.map(({ icon: Icon, title, description, className }) => (
             <div
               key={title}
-              className="group rounded-xl border border-stone-50/10 bg-stone-50/5 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40 hover:bg-stone-50/[0.07] hover:shadow-[0_0_40px_-10px_color-mix(in_oklab,var(--secondary)_60%,transparent)]"
+              className={`group relative overflow-hidden rounded-3xl border border-white/10 bg-stone-50/[0.04] p-7 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-stone-50/[0.07] hover:shadow-[0_0_50px_-10px_rgba(16,185,129,0.5)] ${className}`}
+              style={{
+                boxShadow: "inset 0 0 20px rgba(16,185,129,0.05)",
+              }}
             >
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-secondary/30 bg-secondary/10 text-secondary transition-colors group-hover:bg-secondary group-hover:text-secondary-foreground">
                 <Icon size={22} />
