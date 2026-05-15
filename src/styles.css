@@ -169,13 +169,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  padding: 1px;
+  padding: 2px;
   border-radius: inherit;
   background: conic-gradient(
     from var(--beam-angle),
     transparent 0deg,
-    rgba(16, 185, 129, 0.6) 40deg,
-    rgba(59, 130, 246, 0.35) 90deg,
+    rgba(16, 185, 129, 0.9) 40deg,
+    rgba(59, 130, 246, 0.7) 90deg,
     transparent 160deg,
     transparent 360deg
   );
@@ -188,5 +188,6 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  animation: border-beam-spin 8s linear infinite;
+  animation: border-beam-spin 6s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6)) drop-shadow(0 0 20px rgba(16, 185, 129, 0.3));
 }
