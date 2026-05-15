@@ -20,13 +20,18 @@ export function Footer() {
 
         {/* Nível 2 — Disclaimer Financeiro */}
         <p className="mx-auto mt-8 max-w-2xl text-xs leading-relaxed text-slate-500">
-          A aprovação do financiamento imobiliário e as condições de
-          regularização de crédito estão sujeitas à análise técnica, capacidade
-          de pagamento e políticas das instituições financeiras parceiras.{" "}
-          <span className="font-medium text-slate-400">Importante:</span> nós
-          nunca solicitamos depósitos ou transferências antecipadas para
-          liberação de simulações.
-        </p>
+  A aprovação do financiamento imobiliário e as condições para
+  regularização de crédito estão sujeitas à análise técnica, capacidade
+  de pagamento e às políticas das instituições financeiras parceiras.{" "}
+  <span className="font-medium text-slate-400">
+    Nosso time de especialistas está à sua total disposição
+  </span>{" "}
+  para guiar você com segurança em cada etapa deste processo.{" "}
+  <span className="font-medium text-slate-400">Aviso de Segurança:</span> A
+  WMB Consultoria nunca solicita depósitos, pagamento de taxas ou
+  transferências antecipadas para a realização de simulações ou
+  liberação de crédito.
+</p>
 
         {/* Nível 3 — Informações Legais */}
         <p className="mt-8 text-xs leading-relaxed text-slate-600">
