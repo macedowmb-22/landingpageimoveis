@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
   return (
     <section
-      className="border-beam relative mx-auto w-full max-w-7xl overflow-hidden rounded-[3rem] border border-white/10 transition-all duration-500"
+      className="border-beam-strong relative mx-auto w-full max-w-7xl overflow-hidden rounded-[3rem] border border-white/10 transition-all duration-500"
       style={{
         backgroundColor: "#050B18",
         boxShadow:
