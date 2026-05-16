@@ -12,6 +12,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle2, Loader2, MessageCircle, Clock, Lock } from "lucide-react";
+import { supabase } from "@/lib/supabaseClient";
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
 function maskPhone(value: string) {
   const digits = value.replace(/\D/g, "").slice(0, 11);
@@ -85,21 +92,19 @@ export function LeadForm() {
     setErrors({});
     setLoading(true);
     try {
-      const response = await fetch("https://formspree.io/f/mrejvayz", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          nome: form.nome,
-          whatsapp: form.whatsapp,
-          valor: form.valor,
-          status: form.status,
-        }),
+      const { error } = await supabase.from("leads").insert({
+        nome: form.nome,
+        whatsapp: form.whatsapp,
+        valor_imovel: form.valor,
+        status_nome: form.status,
+        status_venda: "Novo",
       });
 
-      if (!response.ok) throw new Error("Falha no envio");
+      if (error) throw error;
+
+      // Analytics conversion event
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "lead_gerado" });
 
       const teamMessage =
         `NOVO LEAD SITE\n\n` +
@@ -110,10 +115,11 @@ export function LeadForm() {
       const teamUrl = `https://wa.me/5561992261607?text=${encodeURIComponent(teamMessage)}`;
       window.open(teamUrl, "_blank", "noopener,noreferrer");
 
+      setForm({ nome: "", whatsapp: "", valor: "", status: "" });
       setSent(true);
       toast.success("Dados enviados com sucesso!");
     } catch (err) {
-      console.error(err);
+      console.error("Supabase insert error:", err);
       toast.error(
         "Ops! Ocorreu um erro. Tente novamente ou use o botão flutuante.",
       );
