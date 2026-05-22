@@ -35,7 +35,7 @@ export function Footer() {
 
         {/* Nível 3 — Informações Legais */}
         <p className="mt-8 text-xs leading-relaxed text-slate-600">
-          © 2026 WMB Consultora. Todos os
+          © 2026 WMB Consultoria. Todos os
           direitos reservados.
         </p>
       </div>
